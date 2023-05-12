@@ -1,12 +1,12 @@
 import main as m
 import os
 
-USERNAME = "BBernYY"
-WEBHOOK_TITLE = "Update!"
-API_KEY = os.getenv("API_KEY")
-INTERVAL = 1
-TOGGLE_CHANGE = True
-WEBHOOK_URL = os.getenv("WEBHOOK_URL")
+USERNAME = "mogusfrog3" # the victim username
+WEBHOOK_TITLE = f"`{USERNAME}`"+ " update!" # the title on the webook, currently set to the name, with update at the end
+API_KEY = os.getenv("API_KEY") # your hypixel api key, read the readme to define it and fix the error
+INTERVAL = 1 # leave this for hypixel, set it to zero to completely ruin your api key
+TOGGLE_CHANGE = True # show the previous values
+WEBHOOK_URL = os.getenv("WEBHOOK_URL") # same thing, create the .env file look up the readme.
 
 
 
@@ -17,6 +17,7 @@ def find_uuid_by_name(name):
     while not success:
         try:
             uuid = get("https://api.mojang.com/users/profiles/minecraft/"+name).json()['id']
+            success = True
         except KeyError:
             success = False
             time.sleep(INTERVAL)
