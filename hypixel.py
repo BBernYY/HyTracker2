@@ -1,10 +1,10 @@
 import main as m
 import os
 
-USERNAME = "mogusfrog3" # the victim username
+USERNAME = "Bigtimed4" # the victim username
 WEBHOOK_TITLE = f"`{USERNAME}`"+ " update!" # the title on the webook, currently set to the name, with update at the end
 API_KEY = os.getenv("API_KEY") # your hypixel api key, read the readme to define it and fix the error
-INTERVAL = 1 # leave this for hypixel, set it to zero to completely ruin your api key
+INTERVAL = 1 # leave this for hypixel, this is the amount of seconds between each request, 1 is the lowest you can get with minimal ratelimits, and internet traffic isn't too bad because the data packet is tiny
 TOGGLE_CHANGE = True # show the previous values
 WEBHOOK_URL = os.getenv("WEBHOOK_URL") # same thing, create the .env file look up the readme.
 
