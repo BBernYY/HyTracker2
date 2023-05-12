@@ -32,6 +32,7 @@ def send_webhook(embed, url, data, time_elapsed, changes=None):
 
     if changes:
         embed.add_embed_field(name="Time Elapsed", value=f"`{convert_time(time_elapsed)}`", inline=True)
+    embed.set_footer(text="Programmed by BBernYY on GitHub.", icon_url="https://avatars.githubusercontent.com/u/66414852?s=48&v=4")
     webhook.add_embed(embed)
     response = webhook.execute()
 
@@ -66,7 +67,7 @@ def check_for_updates(interval_seconds, url, show_changes):
             time.sleep(interval_seconds)
     return decorator
 
-def main():
+def main(): # OUTDATED! USE HYPIXEL.PY !!!
     import random
     @check_for_updates(1, "Update!", "https://discord.com/api/webhooks/1066438058376974396/qSoY0VHorM1-bkFbZrOZIdGKIh7h7XobKE21dwqejV2dgNlR2OL0G5o_KRGLmpTrU77z", True)
     def func():

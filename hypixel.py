@@ -1,5 +1,4 @@
 import main as m
-# @main.check_for_updates(1, "Update!", "https://discord.com/api/webhooks/1066438058376974396/qSoY0VHorM1-bkFbZrOZIdGKIh7h7XobKE21dwqejV2dgNlR2OL0G5o_KRGLmpTrU77z", True)
 import os
 
 USERNAME = "BBernYY"
